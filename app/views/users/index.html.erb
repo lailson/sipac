@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cpf</th>
+      <th>Email</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Birthday</th>
+      <th>Status</th>
+      <th>Spouse</th>
+      <th>Father</th>
+      <th>Mother</th>
+      <th>Bank state</th>
+      <th>Bank city</th>
+      <th>Bank agency</th>
+      <th>Graduation</th>
+      <th>Graduation begin</th>
+      <th>Graduation</th>
+      <th>Institution</th>
+      <th>Office</th>
+      <th>Admission</th>
+      <th>Doc type</th>
+      <th>Rg</th>
+      <th>Identity</th>
+      <th>Expedition</th>
+      <th>Dispatcher</th>
+      <th>Address type</th>
+      <th>Cep</th>
+      <th>Address</th>
+      <th>Neighborhood</th>
+      <th>Complement</th>
+      <th>Phone1 type</th>
+      <th>Phone1 number</th>
+      <th>Phone2 type</th>
+      <th>Phone2 number</th>
+      <th>Worker ifpi</th>
+      <th>Tutor</th>
+      <th>Tutor polo</th>
+      <th>Teacher type</th>
+      <th>Teacher course</th>
+      <th>Teacher theme</th>
+      <th>Teacher begin</th>
+      <th>Teacher finish</th>
+      <th>Coordinator polo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.cpf %></td>
+        <td><%= user.email %></td>
+        <td><%= user.state %></td>
+        <td><%= user.city %></td>
+        <td><%= user.birthday %></td>
+        <td><%= user.status %></td>
+        <td><%= user.spouse %></td>
+        <td><%= user.father %></td>
+        <td><%= user.mother %></td>
+        <td><%= user.bank_state %></td>
+        <td><%= user.bank_city %></td>
+        <td><%= user.bank_agency %></td>
+        <td><%= user.graduation %></td>
+        <td><%= user.graduation_begin %></td>
+        <td><%= user.graduation %></td>
+        <td><%= user.institution %></td>
+        <td><%= user.office %></td>
+        <td><%= user.admission %></td>
+        <td><%= user.doc_type %></td>
+        <td><%= user.rg %></td>
+        <td><%= user.identity %></td>
+        <td><%= user.expedition %></td>
+        <td><%= user.dispatcher %></td>
+        <td><%= user.address_type %></td>
+        <td><%= user.cep %></td>
+        <td><%= user.address %></td>
+        <td><%= user.neighborhood %></td>
+        <td><%= user.complement %></td>
+        <td><%= user.phone1_type %></td>
+        <td><%= user.phone1_number %></td>
+        <td><%= user.phone2_type %></td>
+        <td><%= user.phone2_number %></td>
+        <td><%= user.worker_ifpi %></td>
+        <td><%= user.tutor %></td>
+        <td><%= user.tutor_polo %></td>
+        <td><%= user.teacher_type %></td>
+        <td><%= user.teacher_course %></td>
+        <td><%= user.teacher_theme %></td>
+        <td><%= user.teacher_begin %></td>
+        <td><%= user.teacher_finish %></td>
+        <td><%= user.coordinator_polo %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
